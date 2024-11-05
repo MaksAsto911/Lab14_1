@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 1</title>
+</head>
+<body>
+    <h1>Завдання 1</h1>
+
+    <script>
+        // 1. Створюємо масив "Трикутних" чисел (n(n+1)/2, де n=1,2,...,10)
+        let Treag = [];
+        for (let n = 1; n <= 10; n++) {
+            Treag.push(n * (n + 1) / 2);
+        }
+        // Виводимо масив Treag
+        document.write("Трикутні числа: " + Treag.join("  ") + "<br>");
+
+        // 2. Створюємо масив квадратів натуральних чисел від 1 до 10
+        let kvd = [];
+        for (let i = 1; i <= 10; i++) {
+            kvd.push(i * i);
+        }
+        // Виводимо масив kvd
+        document.write("Квадрати чисел: " + kvd.join("  ") + "<br>");
+
+        // 3. Об'єднуємо два масиви в один
+        let rez = Treag.concat(kvd);
+        // Виводимо результат об'єднання
+        document.write("Об'єднаний масив: " + rez.join("  ") + "<br>");
+
+        // 4. Об'єднуємо два масиви, але без повторів
+        let uniqueRez = [...new Set(rez)];
+        // Виводимо масив без повторів перед сортуванням
+        document.write("Об'єднаний масив без повторів: " + uniqueRez.join("  ") + "<br>");
+
+        // 5. Сортуємо масив в зворотньому порядку
+        uniqueRez.sort((a, b) => b - a);
+        // Виводимо відсортований масив
+        document.write("Відсортований масив (зворотно): " + uniqueRez.join("  ") + "<br>");
+    </script>
+
+</body>
+</html>
